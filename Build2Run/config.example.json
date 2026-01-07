@@ -1,0 +1,8 @@
+﻿{
+  "SourceFolder":"C:\\Users\\aalit\\repos\\MEScontrol.net Standard\\Binaries",
+  "TargetFolder":"C:\\Program Files (x86)\\BrightEye\\Momentum\\Happy Sause 18.1.0",
+  "MinutesAfterBuild":5,
+  "FileMask":"^(MEScontrol|Momentum).*\\.(dll|exe)$",
+  "KillBlockProcess":true,
+  "ReplaceBinaryFiles":true
+}

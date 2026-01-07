@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build2Run", "Build2Run\Build2Run.csproj", "{DFFDF26B-49DA-4476-9BA5-74AEF5ACB919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build2RunContract", "Build2RunContract\Build2RunContract.csproj", "{8BFCDFAC-B959-4A24-B99C-2DD561C76185}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFFDF26B-49DA-4476-9BA5-74AEF5ACB919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFDF26B-49DA-4476-9BA5-74AEF5ACB919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFDF26B-49DA-4476-9BA5-74AEF5ACB919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFDF26B-49DA-4476-9BA5-74AEF5ACB919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFCDFAC-B959-4A24-B99C-2DD561C76185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFCDFAC-B959-4A24-B99C-2DD561C76185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFCDFAC-B959-4A24-B99C-2DD561C76185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFCDFAC-B959-4A24-B99C-2DD561C76185}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
