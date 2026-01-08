@@ -1,8 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System.Diagnostics;
-using Build2Run;
-using Build2RunContract;
+﻿using Build2Run;
 
 try
 {   
@@ -11,16 +7,29 @@ try
     Console.WriteLine("#                                 Build2Run ver 1.0                                  #");
     Console.WriteLine("#====================================================================================#");
     
-    Console.WriteLine("1. Read configuration file...");
+    Console.WriteLine("1. Read configurations file...");
     var configurationReader = new ConfigurationReaderJson();
-    var rawConfig = configurationReader.Read(args[0]);
+    var configurations = configurationReader.Read($"{System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)}\\config.json");
     
-    if(rawConfig == null)
-        throw new Exception("No configuration found.");
-    
-    var configuration = (Settings)rawConfig;
-    Console.WriteLine("Configuration loaded:\n" + configuration.ToString());
-    
+    if(configurations == null ||  configurations.Length == 0)
+        throw new Exception("Configurations are not found.");
+    var configuration = configurations[0];
+    if (args.Length > 0)
+    {
+        configuration = configurations.FirstOrDefault(conf => conf.ConfigurationName.ToLower() == args[0].ToLower());
+        Console.WriteLine("Configuration are loaded:\n");
+        Console.WriteLine(configuration);
+    }
+    else
+    {
+        Console.WriteLine("Configurations are loaded:\n");
+        for(var i = 0; i < configurations.Length; i++)
+            Console.WriteLine($"{i} {configurations[i]}");
+        Console.Write($"Please enter number of configuration -> ");
+        var indx = int.Parse(Console.ReadLine());
+        configuration = configurations[indx];
+    }
+
     if (configuration.ReplaceBinaryFiles)
         ReplaceBinaryFiles(configuration);
     else

@@ -16,15 +16,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Build2RunContract\Build2RunContract.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Mono.Cecil" Version="0.11.6" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="config.example.json">
+      <None Update="config.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

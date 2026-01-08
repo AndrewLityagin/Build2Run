@@ -1,15 +1,16 @@
-﻿using Build2RunContract;
-
-namespace Build2Run;
+﻿namespace Build2Run;
 
 public class Settings(
+    string configurationName,
     string sourceFolder, 
     string targetFolder, 
     int minutesAfterBuild, 
     string fileMask,
     bool killBlockProcess,
-    bool replaceBinaryFiles): ISettings
+    bool replaceBinaryFiles)
 {
+    public required string ConfigurationName { get; set; } = configurationName;
+    
     public required string SourceFolder { get; set; } = sourceFolder;
     
     public required string TargetFolder { get; set; } = targetFolder;
@@ -24,11 +25,12 @@ public class Settings(
 
     public override string ToString()
     {
-        return $"Source folder: {this.SourceFolder};\n" +
-               $"Target folder: {this.TargetFolder};\n" +
-               $"Minutes after build: {this.MinutesAfterBuild};\n" +
-               $"File masks: {this.FileMask};\n" +
-               $"Replace binary files : {this.ReplaceBinaryFiles};\n" +
-               $"Kill block process: {this.KillBlockProcess};";
+        return  $"Configuration name: {this.ConfigurationName};\n" +
+                $"\t- Source folder: {this.SourceFolder};\n" +
+                $"\t- Target folder: {this.TargetFolder};\n" +
+                $"\t- Minutes after build: {this.MinutesAfterBuild};\n" +
+                $"\t- File masks: {this.FileMask};\n" +
+                $"\t- Replace binary files : {this.ReplaceBinaryFiles};\n" +
+                $"\t- Kill block process: {this.KillBlockProcess};";
     }
 }
