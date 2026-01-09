@@ -96,7 +96,7 @@ void ReplaceBinaryFiles(Settings config)
                 FileLockerHelper.CloseProcess(process.Key);
             }
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2500);
             Console.WriteLine($"\nReplacing: ");
             foreach (var files in isNotReplacedFiles)
             {

@@ -25,7 +25,7 @@ public class Settings(
 
     public override string ToString()
     {
-        return  $"Configuration name: {this.ConfigurationName};\n" +
+        return  $"{this.ConfigurationName};\n" +
                 $"\t- Source folder: {this.SourceFolder};\n" +
                 $"\t- Target folder: {this.TargetFolder};\n" +
                 $"\t- Minutes after build: {this.MinutesAfterBuild};\n" +
